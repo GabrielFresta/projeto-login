@@ -52,12 +52,13 @@ section#login > div#imagem {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 200px;
 }
-section#login > div#formulario h1 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+section#login > div#formulario {
+  display: block;
+  padding: 10px;
 }
-section#login > div#formulario p {
-  font-size: 0.9em;
+div#formulario > h1 {
+  text-align: center;
+  font-size: 1.2em;
 }
