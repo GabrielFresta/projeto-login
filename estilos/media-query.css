@@ -10,7 +10,7 @@
   #login {
     display: flex;
     flex-direction: row;
-    min-width: 768px;
+    min-width: 770px;
     max-width: 1280px;
     height: 500px;
     padding: 0;
