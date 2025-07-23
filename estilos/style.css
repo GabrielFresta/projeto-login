@@ -1,64 +1,104 @@
-/* paletas de cores  
-plano de fundo esruro
-#0D0D1A (Azul petróleo escuro com leve roxo)
-
-#E0C3FC (lavanda clara)
---------------------------
-Cor de botão primário
-#FF9E57 (Laranja que lembra do centro da galáxia)
-------------------------
-cor para botões secundários
-#5A5A89 (azul acinzentado)
--------------------------
-Texto principal
- #FFFFFF (branco)
-
+/* Paleta de cores:
+Fundo escuro: #0D0D1A
+Lavanda clara: #E0C3FC
+Botão primário: #FF9E57
+Botão secundário: #5A5A89
+Texto principal: #FFFFFF
 */
 
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 0px;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body,
 html {
-  background-color: #0d0d1a;
-  width: 100vw;
-  height: 100vh;
-}
-main {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-section#login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  background-color: white;
-  width: 250px;
-  height: 500px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0.45);
-  transition: width 0.3s, heigth.3s;
-  transition-timing-function: ease;
-}
-section#login > div#imagem {
-  background: #0d0d1a url(../imagens/estrelar.jpg) no-repeat;
+  width: 100%;
+  height: 100%;
+  background: url("../imagens/estrelar.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 200px;
 }
-section#login > div#formulario {
-  display: block;
-  padding: 10px;
+
+/* Container geral */
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-div#formulario > h1 {
+
+/* Estrutura do login */
+#login {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #000;
+}
+
+/* Título */
+#formulario h1 {
+  font-size: 2.5em;
   text-align: center;
+  color: #e0c3fc;
+  margin-bottom: 30px;
+}
+
+/* Campos */
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.campo input {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1a1a2e;
+  color: #fff;
+  font-size: 1em;
+}
+
+/* Botão de entrar */
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background-color: #ff9e57;
+  border: none;
+  border-radius: 12px;
+  color: white;
   font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #e05c10;
+}
+
+/* Link secundário */
+a.botao {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #e0c3fc;
+  font-size: 0.95em;
+}
+
+a.botao:hover {
+  text-decoration: underline;
 }
